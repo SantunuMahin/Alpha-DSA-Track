@@ -1,0 +1,247 @@
+ body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f7fa;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+        
+        .header-note {
+            background-color: #ffeaa7;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .category {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin: 25px 0 15px;
+            font-size: 1.2em;
+        }
+        
+        .problem-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .problem-table th {
+            background-color: #2980b9;
+            color: white;
+            padding: 12px 15px;
+            text-align: left;
+        }
+        
+        .problem-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .problem-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .problem-table tr:hover {
+            background-color: #f1f8fe;
+        }
+        
+        .problem-name {
+            font-weight: 500;
+        }
+        
+        .problem-link {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        .problem-link:hover {
+            text-decoration: underline;
+        }
+        
+        .difficulty-easy {
+            background-color: #2ecc71;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+        
+        .difficulty-medium {
+            background-color: #f39c12;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+        
+        .difficulty-hard {
+            background-color: #e74c3c;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+        
+        .status-toggle {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+        }
+        
+        .status-toggle input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 24px;
+        }
+        
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        
+        input:checked + .slider {
+            background-color: #2ecc71;
+        }
+        
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+        
+        .date-picker {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .date-picker label {
+            font-weight: bold;
+        }
+        
+        .date-picker input {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .stats {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .stat-box {
+            text-align: center;
+            padding: 10px 20px;
+            border-radius: 5px;
+            min-width: 120px;
+        }
+        
+        .stat-box h3 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        
+        .stat-box p {
+            margin: 5px 0 0;
+            color: #666;
+        }
+        
+        .total-problems {
+            background-color: #f0f8ff;
+            border-left: 4px solid #3498db;
+        }
+        
+        .solved-today {
+            background-color: #f0fff0;
+            border-left: 4px solid #2ecc71;
+        }
+        
+        .total-solved {
+            background-color: #fff8f0;
+            border-left: 4px solid #f39c12;
+        }
+        
+        .progress-container {
+            margin-top: 30px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .progress-bar {
+            height: 20px;
+            background-color: #ecf0f1;
+            border-radius: 10px;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+        
+        .progress {
+            height: 100%;
+            background-color: #2ecc71;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+        
+        @media (max-width: 768px) {
+            .problem-table {
+                font-size: 0.9em;
+            }
+            
+            .problem-table th, 
+            .problem-table td {
+                padding: 8px 10px;
+            }
+            
+            .stats {
+                flex-direction: column;
+            }
+        }

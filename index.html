@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA Problem Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Daily DSA Problem Tracker</h1>
+    
+    <div class="header-note">
+        Track your daily problem solving progress. Mark problems as solved when you complete them!
+    </div>
+    
+    <div class="date-picker">
+        <label for="tracking-date">Select Date:</label>
+        <input type="date" id="tracking-date">
+    </div>
+    
+    <div class="stats">
+        <div class="stat-box total-problems">
+            <h3 id="total-count">0</h3>
+            <p>Total Problems</p>
+        </div>
+        <div class="stat-box solved-today">
+            <h3 id="solved-today-count">0</h3>
+            <p>Solved Today</p>
+        </div>
+        <div class="stat-box total-solved">
+            <h3 id="total-solved-count">0</h3>
+            <p>Total Solved</p>
+        </div>
+    </div>
+    
+    <div class="progress-container">
+        <h3>Overall Progress</h3>
+        <div class="progress-bar">
+            <div class="progress" id="progress-bar"></div>
+        </div>
+        <p id="progress-text">0% Complete</p>
+    </div>
+    
+    <div id="problems-container">
+        <!-- Problems will be loaded here by JavaScript -->
+    </div>
+
+    <script src="script.js">
+        
+    </script>
+</body>
+</html>
